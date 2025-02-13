@@ -28,8 +28,8 @@
                     <p><strong>{{ pedido.ped_conf_cli_ped_id }}</strong></p>
                     <p style="text-align: center; font-size: 16px;">Número do Token:</p>
                     <p><strong>{{ pedido.ped_conf_cli_token }}</strong></p>
-                    <p style="text-align: center; font-size: 16px;">Data de Envio:</p>
-                    <p><strong>{{ pedido.ped_conf_cli_dt_envio|date:"d/m/Y" }}</strong></p>
+                    <p style="text-align: center; font-size: 16px;">Data e Hora de Confirmaão:</p>
+                    <p><strong>{{ pedido.ped_conf_cli_dt_confirmacao|date:"d/m/Y" }}  às {{ pedido.ped_conf_cli_dt_confirmacao|time:"H:i:s" }}</strong></p>
                 </main>
                 <!-- Rodapé -->
                 <footer style="background-color: #f5f5f5; padding: 20px; text-align: center; font-size: 14px; color: #666; border-radius: 5px;">

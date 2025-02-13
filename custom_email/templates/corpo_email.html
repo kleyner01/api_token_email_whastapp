@@ -16,7 +16,7 @@
             <p style="text-align: center; font-size: 16px; color: #666;">Estamos enviando as informações do seu pedido.</p>
             <p style="text-align: center; font-size: 16px;">Número do Pedido: <strong>{{ pedido.ped_conf_cli_ped_id }}</strong></p>
             <p style="text-align: center; font-size: 16px;">Token de Confirmação: <strong>{{ pedido.ped_conf_cli_token }}</strong></p>
-            <p style="text-align: center; font-size: 16px;">Data de Envio: <strong>{{ pedido.ped_conf_cli_dt_envio|date:"d/m/Y" }}</strong></p>
+            <p style="text-align: center; font-size: 16px;">Data de Envio: <strong>{{ pedido.ped_conf_cli_dt_envio|date:"d/m/Y" }} às {{ pedido.ped_conf_cli_dt_envio|time:"H:i:s" }}</strong></p>
             <p style="text-align: center; font-size: 16px;">Para confirmar seu pedido, clique no botão abaixo:</p>
             <p style="text-align: center;">
                 <a href="{{ link_confirmacao }}" 
