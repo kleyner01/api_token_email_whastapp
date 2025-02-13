@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmação de Pedido</title>
+</head>
+<body style="font-family: Arial, sans-serif; color: #333; line-height: 1.6; margin: 0; padding: 0; background-color: #f9f9f9;">
+    <div style="max-width: 1160px; margin: 20px auto; border: 1px solid #ddd; border-radius: 8px; background-color: #fff; overflow: hidden;">
+        <!-- Cabeçalho -->
+        <header style="background-color: #007bff; padding: 20px; text-align: center; color: #fff;">
+            <h1 style="margin: 0; font-size: 24px;">Confirmação de Pedido</h1>
+        </header>
+        <!-- Corpo do e-mail -->
+        <main style="padding: 20px;">
+            <h2 style="margin-top: 0; text-align: center; color: #555;">Olá, {{ email }}</h2>
+            <p style="text-align: center; font-size: 16px; color: #666;">Estamos enviando as informações do seu pedido.</p>
+            <p style="text-align: center; font-size: 16px;">Número do Pedido: <strong>{{ pedido.ped_conf_cli_ped_id }}</strong></p>
+            <p style="text-align: center; font-size: 16px;">Token de Confirmação: <strong>{{ pedido.ped_conf_cli_token }}</strong></p>
+            <p style="text-align: center; font-size: 16px;">Data de Envio: <strong>{{ pedido.ped_conf_cli_dt_envio|date:"d/m/Y" }}</strong></p>
+            <p style="text-align: center; font-size: 16px;">Para confirmar seu pedido, clique no botão abaixo:</p>
+            <p style="text-align: center;">
+                <a href="{{ link_confirmacao }}" 
+                style="display: inline-block; padding: 10px 20px; color: #fff; background-color: #007bff; text-decoration: none; border-radius: 5px; font-size: 16px;">Confirmar Pedido</a>
+            </p>
+        </main>
+        <!-- Rodapé -->
+        <footer style="background-color: #f5f5f5; padding: 20px; text-align: center; font-size: 14px; color: #666;">
+            <p>Agradecemos pela sua confiança em nossos serviços.</p>
+            <p>Atenciosamente,</p>
+            <p><strong>Acofer</strong></p>
+            <img src="cid:evento_image" alt="Banner Acofer" style="width: 100%; max-width: 1160px; height: auto; margin-top: 10px; border-radius: 5px;" />
+        </footer>
+    </div>
+</body>
+</html>
+
